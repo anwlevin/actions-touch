@@ -27,8 +27,8 @@ jobs:
       - run: ./makeTimestamp.sh
       - name: Git Auto Commit
         uses: stefanzweifel/git-auto-commit-action@v4
-          with:
-            commit_message: Apply automatic changes $GITDATE
+        with:
+          commit_message: Apply automatic changes $GITDATE
         
             
       
