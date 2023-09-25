@@ -8,8 +8,10 @@ permissions:
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
+    env:
+      GITDATE: 0-day
     steps:
-      - run: date
+      - run: date -> $GITDATE
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
@@ -25,6 +27,8 @@ jobs:
       - run: ./makeTimestamp.sh
       - name: Git Auto Commit
         uses: stefanzweifel/git-auto-commit-action@v4
+          with:
+            commit_message: Apply automatic changes $GITDATE
         
             
       
