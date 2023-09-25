@@ -16,3 +16,9 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - run: ./makeTimestamp.sh
+      - name: Git Auto Commit
+        uses: stefanzweifel/git-auto-commit-action@v4
+        
+            
+      
