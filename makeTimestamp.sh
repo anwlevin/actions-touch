@@ -1,6 +1,6 @@
 
 
-timestampVar=$(date +%s)
+timestampVar=$(date +%F-%s)
 
 dateVar=$(date)
 
