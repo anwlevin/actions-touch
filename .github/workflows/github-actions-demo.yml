@@ -1,6 +1,8 @@
 name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
+permissions:
+  contents: write
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
@@ -16,6 +18,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - uses: actions/checkout@v3
       - run: ./makeTimestamp.sh
       - name: Git Auto Commit
         uses: stefanzweifel/git-auto-commit-action@v4
