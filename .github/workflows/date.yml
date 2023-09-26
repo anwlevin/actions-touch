@@ -10,7 +10,7 @@ jobs:
       GITDATE: 0-day
     steps:
       - run: echo "🍎🍏 Date Time Variable"
-      - run: echo "$(date)" > $GITDATE
+      - run: date >> $GITDATE
       - run: echo "GITDATE $GITDATE"
       - run: echo "🍊🍐 End"
       
