@@ -1,0 +1,18 @@
+name: Date Time Variable
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+jobs:
+  Data-Time-Variable:
+    runs-on: ubuntu-latest
+    env:
+      GITDATE: 0-day
+    steps:
+      #- run: echo "$(date)" > $GITDATE
+      #- run: echo "GITDATE $GITDATE"
+      - run: echo "🍎🍏 Date Time Variable"
+      
+        
+            
+      
