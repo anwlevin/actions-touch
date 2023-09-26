@@ -12,6 +12,7 @@ jobs:
       - run: echo "🍎🍏 Date Time Variable"
       - run: echo "$(date)" > $GITDATE
       - run: echo "GITDATE $GITDATE"
+      - run: echo "🍊🍐 End"
       
         
             
